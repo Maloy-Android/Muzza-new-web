@@ -139,13 +139,9 @@
 
     function initializeApp() {
       const savedLanguage = localStorage.getItem('language') || 'ru';
-      const savedTheme = localStorage.getItem('theme') || 'dark';
-      
       document.getElementById('language').value = savedLanguage;
-      document.getElementById('theme').value = savedTheme;
       
       applyLanguage(savedLanguage);
-      applyTheme(savedTheme);
     }
 
     function applyLanguage(language) {
@@ -155,16 +151,6 @@
         if (element) {
             element.textContent = value;
         }
-      }
-    }
-
-    function applyTheme(theme) {
-      if (theme === 'light') {
-        document.body.classList.add('light-theme');
-        document.body.classList.remove('bg-oled-black');
-      } else {
-        document.body.classList.remove('light-theme');
-        document.body.classList.add('bg-oled-black');
       }
     }
 
@@ -178,13 +164,9 @@
 
     function applySettings() {
       const language = document.getElementById('language').value;
-      const theme = document.getElementById('theme').value;
-      
       localStorage.setItem('language', language);
-      localStorage.setItem('theme', theme);
       
       applyLanguage(language);
-      applyTheme(theme);
       closeSettings();
     }
 

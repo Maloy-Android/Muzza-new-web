@@ -7,15 +7,6 @@
         --accent-2: #03DAC5;
       }
 
-      .light-theme {
-        --bg-primary: #FFFFFF;
-        --text-primary: #000000;
-        --card-bg: #f5f5f5;
-        --section-bg: #e0e0e0;
-        --accent-1: #6200ea;
-        --accent-2: #018786;
-      }
-
       body {
         background-color: var(--bg-primary);
         color: var(--text-primary);
