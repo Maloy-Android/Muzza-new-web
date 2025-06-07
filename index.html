@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muzza</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="img/icon.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+<body class="bg-oled-black text-white">
+  <nav class="gradient-bg py-4 px-6 sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <img src="img/icon.png" alt="Muzza Icon" class="navbar-icon">
+        <h1 class="text-2xl font-bold">Muzza</h1>
+      </div>
+      <div class="hidden md:flex space-x-8">
+        <a onclick="showSettings()" class="hover:text-deep-purple transition" id="settings-link">Настройки</a>
+        <a href="#features" class="hover:text-deep-purple transition" id="features-link">Возможности</a>
+        <a href="#screenshots" class="hover:text-deep-purple transition" id="screenshots-link">Скриншоты</a>
+        <a href="#tech" class="hover:text-deep-purple transition" id="tech-link">Технологии</a>
+        <a href="#download" onclick="" class="hover:text-deep-purple transition" id="download-link">Скачать</a>
+        <a href="https://github.com/Maloy-Android" class="flex items-center hover:text-deep-purple transition" id="developer-link">
+          <img src="https://avatars.githubusercontent.com/u/177887593?s=400&u=3a6d7cba803b4efafeb40c52e348eee1f2c6b1c3&v=4" alt="Developer" class="developer-avatar">
+          <span id="developer-text">Maloy-Android</span>
+        </a>
+      </div>
+      <button class="md:hidden text-deep-purple">
+        <span class="material-symbols-outlined text-3xl">menu</span>
+      </button>
+    </div>
+  </nav>
+
+  <div id="settings" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeSettings()">&times;</span>
+        <h2 id="settings-title">Настройки</h2>
+          <div class="setting-group">
+          <label for="theme" id="theme-label">Тема:</label>
+          <select id="theme">
+              <option value="dark">Тёмная</option>
+              <option value="light">Светлая</option>
+          </select>
+        </div>
+        <div class="setting-group">
+          <label for="language" id="language-label">Язык:</label>
+          <select id="language">
+              <option value="en">Английский</option>
+              <option value="ua">Украинский</option>
+              <option value="ru">Русский</option>
+              <option value="it">Итальянский</option>
+          </select>
+        </div>
+        <button class="action-button" onclick="applySettings()" id="apply-button">Применить</button>
+    </div>
+</div>
+
+  <div class="flex justify-center mb-6">
+  <img 
+    src="img/icon.png" 
+    alt="Muzza Icon" 
+    class="w-24 h-24 md:w-32 md:h-32 object-contain mx-auto">
+</div>
+  <section class="py-20 px-6">
+    <div class="container mx-auto text-center max-w-4xl">
+      <h1 class="text-5xl md:text-6xl font-bold mb-6" id="hero-title">Muzza</h1>
+      <p class="text-xl text-gray-300 mb-10" id="hero-subtitle">Продвинутый музыкальный плеер с интеграцией YouTube Music, созданный с использованием современных технологий</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <button class="bg-deep-purple hover:bg-purple-700 text-black font-bold py-3 px-8 rounded-full transition transform hover:scale-105">
+            <a href="#download">
+              <span id="download-button">Скачать сейчас</span>
+            </a>
+        </button>
+        <button class="border-2 border-deep-purple text-deep-purple hover:bg-deep-purple hover:text-black font-bold py-3 px-8 rounded-full transition">
+          <span id="learn-more">Подробнее</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="py-16 px-6">
+    <div class="container mx-auto">
+      <h2 class="text-4xl font-bold mb-16 text-center section-title" id="features-title">Превосходные возможности</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="feature-card p-8 rounded-xl">
+          <div class="w-14 h-14 bg-gray-800 rounded-lg flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined text-deep-purple text-3xl">library_music</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-4" id="feature-title-1">YouTube Music интеграция</h3>
+          <p class="text-gray-300" id="feature-desc-1">Доступ к миллионам треков, альбомов и плейлистов напрямую из YouTube Music</p>
+        </div>
+        
+        <div class="feature-card p-8 rounded-xl">
+          <div class="w-14 h-14 bg-gray-800 rounded-lg flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined text-deep-purple text-3xl">format_paint</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-4" id="feature-title-2">Современный дизайн</h3>
+          <p class="text-gray-300" id="feature-desc-2">Красивый современный дизайн основанный на технологии Material3</p>
+        </div>
+        <div class="feature-card p-8 rounded-xl">
+          <div class="w-14 h-14 bg-gray-800 rounded-lg flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined text-deep-purple text-3xl">music_note</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-4" id="feature-title-3">Поддержка локального плеера</h3>
+          <p class="text-gray-300" id="feature-desc-3">Слушайте музыку прямо с вашего устройства</p>
+        </div>
+        <div class="feature-card p-8 rounded-xl">
+          <div class="w-14 h-14 bg-gray-800 rounded-lg flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined text-deep-purple text-3xl">code</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-4" id="feature-title-4">Open Source</h3>
+          <p class="text-gray-300" id="feature-desc-4">Проект с открытым исходным кодом, доступный на GitHub</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="screenshots" class="py-16 px-6 bg-gray-900">
+    <div class="container mx-auto">
+      <h2 class="text-4xl font-bold mb-16 text-center section-title" id="screenshots-title">Скриншоты интерфейса</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="phone-mockup">
+          <div class="phone-screen">
+            <img src="img/screenshot1.png">
+          </div>
+        </div>
+        <div class="phone-mockup">
+          <div class="phone-screen">
+            <img src="img/screenshot2.png">
+          </div>
+        </div>
+        <div class="phone-mockup">
+          <div class="phone-screen">
+            <img src="img/screenshot3.png">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tech" class="py-16 px-6">
+    <div class="container mx-auto">
+      <h2 class="text-4xl font-bold mb-16 text-center section-title" id="tech-title">Передовые технологии</h2>
+      <div class="flex flex-wrap justify-center gap-8">
+        <div class="tech-card w-32 h-32 bg-gray-900 rounded-xl flex flex-col items-center justify-center p-4">
+          <div class="text-deep-purple font-bold mb-2">Kotlin</div>
+          <span class="material-symbols-outlined text-4xl">code</span>
+        </div>
+        <div class="tech-card w-32 h-32 bg-gray-900 rounded-xl flex flex-col items-center justify-center p-4">
+          <div class="text-teal-accent font-bold mb-2">Jetpack</div>
+          <span class="material-symbols-outlined text-4xl">rocket_launch</span>
+        </div>
+        <div class="tech-card w-32 h-32 bg-gray-900 rounded-xl flex flex-col items-center justify-center p-4">
+          <div class="text-deep-purple font-bold mb-2">Compose</div>
+          <span class="material-symbols-outlined text-4xl">view_in_ar</span>
+        </div>
+        <div class="tech-card w-32 h-32 bg-gray-900 rounded-xl flex flex-col items-center justify-center p-4">
+          <div class="text-teal-accent font-bold mb-2">Material 3</div>
+          <span class="material-symbols-outlined text-4xl">design_services</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="download" class="py-20 px-6 gradient-bg">
+    <div class="container mx-auto text-center max-w-3xl">
+      <h2 class="text-4xl font-bold mb-4" id="download-title">Начните музыкальное путешествие</h2>
+      <p class="text-xl text-gray-300 mb-10" id="download-subtitle">Установите Muzza прямо сейчас и откройте мир премиального звука</p>
+      <button class="bg-teal-accent hover:bg-teal-400 text-black font-bold py-4 px-12 rounded-full text-lg transition transform hover:scale-105 flex items-center justify-center mx-auto">
+        <span class="material-symbols-outlined mr-2">android</span>
+        <a href="https://github.com/Maloy-Android/Muzza/releases/latest">
+          <span id="download-button2">Скачать для Android</span>
+        </a>
+      </button>
+      <p class="mt-6 text-gray-400" id="requirements">Требуется Android 9.0 или выше</p>
+    </div>
+  </section>
+
+  <footer class="py-10 px-6 bg-black">
+    <div class="container mx-auto text-center">
+      <div class="flex justify-center space-x-6 mb-6">
+        <a href="#" class="text-gray-400 hover:text-deep-purple transition">
+          <span class="material-symbols-outlined">alternate_email</span>
+        </a>
+        <a href="https://github.com/Maloy-Android/Muzza-Website" class="text-gray-400 hover:text-deep-purple transition">
+          <span class="material-symbols-outlined">code</span>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-deep-purple transition">
+          <span class="material-symbols-outlined">public</span>
+        </a>
+      </div>
+      <p class="text-gray-500" id="copyright">© 2025 Muzza Все права защищены.</p>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
