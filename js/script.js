@@ -40,7 +40,10 @@
         "feature-title-4": "Open Source",
         "feature-desc-4": "Open source project available on GitHub",
         "available-android": "Available on Android",
-        "developer-text": "Maloy-Android"
+        "developer-text": "Maloy-Android",
+        "developer-info": "The creator of Muzza, passionate about development and design.",
+        "developer-title": "Developer",
+        "visit-github": "Visit GitHub"
       },
       ua: {
         "settings-link": "Налаштування",
@@ -71,7 +74,10 @@
         "feature-title-4": "Open Source",
         "feature-desc-4": "Проект з відкритим кодом доступний на GitHub",
         "available-android": "Доступно на Android",
-        "developer-text": "Maloy-Android"
+        "developer-text": "Maloy-Android",
+        "developer-info": "Творець Muzza, захоплений розробкою та дизайном.",
+                "developer-title": "Розробник",
+        "visit-github": "Відвідайте GitHub"
       },
       ru: {
         "settings-link": "Настройки",
@@ -102,7 +108,10 @@
         "feature-title-4": "Open Source",
         "feature-desc-4": "Проект с открытым исходным кодом, доступный на GitHub",
         "available-android": "Доступно на Android",
-        "developer-text": "Maloy-Android"
+        "developer-text": "Maloy-Android",
+        "developer-info": "Создатель Muzza, увлеченный разработкой и дизайном",
+        "developer-title": "Разработчик",
+        "visit-github": "Посетить GitHub"
       },
       it: {
         "settings-link": "Impostazioni",
@@ -133,7 +142,10 @@
         "feature-title-4": "Open Source",
         "feature-desc-4": "Progetto open source disponibile su GitHub",
         "available-android": "Disponibile su Android",
-        "developer-text": "Maloy-Android"
+        "developer-text": "Maloy-Android",
+        "developer-info": "Il creatore di Muzza, appassionato di sviluppo e design.",
+                        "developer-title": "Sviluppatore",
+                "visit-github": "Visita GitHub"
       }
     };
 
